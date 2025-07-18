@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
+import SocialLogin from './SocialLogin';
 
 const Login: React.FC<{ onToggleForm: () => void }> = ({ onToggleForm }) => {
   const [username, setUsername] = useState('');
@@ -46,6 +47,8 @@ const Login: React.FC<{ onToggleForm: () => void }> = ({ onToggleForm }) => {
         </div>
         <button type="submit">ログイン</button>
       </form>
+      
+      <SocialLogin />
       
       <p className="toggle-form">
         アカウントをお持ちでないですか？ <button onClick={onToggleForm}>新規登録</button>

@@ -9,5 +9,9 @@ export const cognitoConfig = {
     redirectSignIn: 'http://localhost:8080/',
     redirectSignOut: 'http://localhost:8080/',
     responseType: 'code'
-  }
+  },
+  // ソーシャルプロバイダー設定
+  federationTarget: 'COGNITO_USER_POOLS',
+  // 利用可能なソーシャルプロバイダー
+  socialProviders: ['Google', 'Facebook']
 };

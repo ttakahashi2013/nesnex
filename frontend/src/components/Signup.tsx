@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
+import SocialLogin from './SocialLogin';
 
 interface SignupProps {
   onToggleForm: () => void;
@@ -92,6 +93,8 @@ const Signup: React.FC<SignupProps> = ({ onToggleForm, onSignupSuccess }) => {
         
         <button type="submit">登録</button>
       </form>
+      
+      <SocialLogin />
       
       <p className="toggle-form">
         すでにアカウントをお持ちですか？ <button onClick={onToggleForm}>ログイン</button>
